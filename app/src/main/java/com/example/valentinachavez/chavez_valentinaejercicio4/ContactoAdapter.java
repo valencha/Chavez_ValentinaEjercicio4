@@ -70,14 +70,14 @@ public class ContactoAdapter extends BaseAdapter {
 
        tv_nombre.setText(contactos.get(position).getNombre());
         tv_numero.setText(contactos.get(position).getNumero());
+        String gener=contactos.get(position).getGenero();
 
+       if(gener.equals("mujer")){
+           img_genero.setImageResource(R.drawable.female);
 
-        if(contactos.get(position).getGenero().equals("mujer")){
-
-            
         }else {
 
-
+           img_genero.setImageResource(R.drawable.male);
         }
 
 
