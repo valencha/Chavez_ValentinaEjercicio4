@@ -34,8 +34,6 @@ public class ContactoAdapter extends BaseAdapter {
 
     }
 
-
-
     @Override
     public int getCount() {
         return contactos.size();
@@ -60,7 +58,7 @@ public class ContactoAdapter extends BaseAdapter {
 
         View renglon=inflater.inflate(R.layout.renglon, null,false);
         TextView tv_nombre=renglon.findViewById(R.id.tv_nombre);
-        ImageView img_genero=renglon.findViewById(R.id.img_genero);
+        final ImageView img_genero=renglon.findViewById(R.id.im_genero);
         final TextView tv_numero=renglon.findViewById(R.id.tv_numero);
 
 
@@ -70,16 +68,20 @@ public class ContactoAdapter extends BaseAdapter {
 
        tv_nombre.setText(contactos.get(position).getNombre());
         tv_numero.setText(contactos.get(position).getNumero());
-        String gener=contactos.get(position).getGenero();
+       String gene=contactos.get(position).getGenero();
 
-       if(gener.equals("mujer")){
+
+    if(gene.equals("mujer")){
            img_genero.setImageResource(R.drawable.female);
+
 
         }else {
 
-           img_genero.setImageResource(R.drawable.male);
+        img_genero.setImageResource(R.drawable.male);
+
         }
 
+      //  System.out.println(gene);
 
 
 
@@ -88,8 +90,6 @@ public class ContactoAdapter extends BaseAdapter {
           public void onClick(View view) {
                 contactos.remove(position);
                notifyDataSetChanged();
-
-
            }
         });
 

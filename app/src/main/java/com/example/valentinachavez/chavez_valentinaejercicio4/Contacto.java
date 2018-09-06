@@ -7,7 +7,7 @@ public class Contacto {
     private String genero;
 
 
-    public Contacto(String nombre,String numero,String genero){
+    public Contacto(String nombre,String numero,String genero ){
 
         this.nombre=nombre;
         this.numero=numero;

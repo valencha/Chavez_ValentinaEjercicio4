@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_agregar;
     TextView tv_f;
     String genero;
-    ImageView img_genero;
+    ImageView im_genero;
     Boolean switchState;
 
     @Override
@@ -34,31 +34,37 @@ public class MainActivity extends AppCompatActivity {
         edt_number = findViewById(R.id.edt_number);
         switch_gene = findViewById(R.id.switch_gene);
         btn_agregar = findViewById(R.id.btn_agregar);
-        img_genero = findViewById(R.id.img_genero);
+        im_genero = findViewById(R.id.im_genero);
         tv_f = findViewById(R.id.tv_f);
 
         lv_contactos = findViewById(R.id.lv_contactos);
         customAdapter = new ContactoAdapter(MainActivity.this);
-        switchState = switch_gene.isChecked();
+
         lv_contactos.setAdapter(customAdapter);
 
 
         btn_agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                switchState = switch_gene.isChecked();
                 String nom = edt_name.getText().toString();
 
                 String num = edt_number.getText().toString();
 
+                String gener = switch_gene.getText().toString();
 
-                if (switchState = true) {
+
+                //System.out.println(switchState);
+
+                if (switchState == true) {
                     genero = "mujer";
                 } else {
                     genero = "hombre";
                 }
 
+                //System.out.println(genero);
 
-                Contacto newContacto = new Contacto(nom, num, genero);
+                Contacto newContacto = new Contacto(nom, num,genero);
                 customAdapter.agregarContacto(newContacto);
 
 

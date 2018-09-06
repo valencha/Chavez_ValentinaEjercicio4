@@ -56,9 +56,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
+        android:checked="true"
         android:text="M "
         android:textColor="#fff"
-        android:checked="true"
+        android:textOff="F"
+        android:textOn="M"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_f"
         app:layout_constraintEnd_toStartOf="@+id/tv_f"
         app:layout_constraintStart_toStartOf="parent" />
