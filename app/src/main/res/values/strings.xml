@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Chavez_ValentinaEjercicio4</string>
+
+    <string name="edt_name">Nombre del contacto</string>
+    <string name="edt_number">Teléfono</string>
+
+</resources>
