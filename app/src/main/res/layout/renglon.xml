@@ -19,13 +19,16 @@
         tools:layout_editor_absoluteY="0dp">
 
 
-
+        <ImageView
+            android:id="@+id/im_genero"
+            android:layout_width="39dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp" />
 
         <LinearLayout
             android:layout_width="237dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
 
 
             <TextView
@@ -59,13 +62,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_nombre" />
 
         </LinearLayout>
-
-
-        <ImageView
-            android:id="@+id/im_genero"
-            android:layout_width="39dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"/>
 
 
         <ImageButton

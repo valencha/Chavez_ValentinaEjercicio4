@@ -8,6 +8,19 @@
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
+    <TextView
+        android:id="@+id/tv_f"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="262dp"
+        android:layout_marginTop="12dp"
+        android:text="F"
+        android:textColor="#ffff"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/switch_gene"
+        app:layout_constraintTop_toBottomOf="@+id/edt_number" />
+
     <EditText
         android:id="@+id/edt_name"
         android:layout_width="wrap_content"
@@ -38,29 +51,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_name" />
 
-    <TextView
-        android:id="@+id/tv_f"
-        android:layout_width="0dp"
-        android:layout_height="28dp"
-        android:layout_marginEnd="262dp"
-        android:layout_marginTop="15dp"
-        android:text=" F"
-        android:textColor="#ffff"
-        android:textSize="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switch_gene"
-        app:layout_constraintTop_toBottomOf="@+id/edt_number" />
-
     <Switch
         android:id="@+id/switch_gene"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:checked="true"
-        android:text="M "
+        android:text="M"
         android:textColor="#fff"
-        android:textOff="F"
-        android:textOn="M"
+        android:textOff="M"
+        android:textOn="F"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_f"
         app:layout_constraintEnd_toStartOf="@+id/tv_f"
         app:layout_constraintStart_toStartOf="parent" />
@@ -81,7 +81,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/edt_number"
         app:layout_constraintTop_toTopOf="@+id/edt_name" />
-    
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
